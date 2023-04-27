@@ -1,4 +1,5 @@
-extensions: []
+extensions:
+  - giveaway
 
 presence:
   status: idle
@@ -19,7 +20,7 @@ logging:
 
   formatters:
     default:
-      format: "%(asctime)s : %(levelname)s : %(filename)s : %(name)s : %(message)s"
+      format: "%(asctime)s : %(levelname)s : %(module)s : %(name)s : %(message)s"
       datefmt: "%Y-%m-%d %H:%M:%S"
 
   handlers:

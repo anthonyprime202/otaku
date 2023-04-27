@@ -24,7 +24,7 @@ class GiveawayEmbed(Embed):
         super().__init__(
             title=prize,
             description=description,
-            color=self.colors.fuchsia,
+            color=self.colors.blurple,
             timestamp=start_time,
         )
         self.set_footer(text="Started")
@@ -49,7 +49,7 @@ class GiveawayEndEmbed(Embed):
         description: Optional[str] = None,
     ):
         super().__init__(
-            title=prize, description=description, color=self.colors.fuchsia, timestamp=start_time
+            title=prize, description=description, color=self.colors.blurple, timestamp=start_time
         )
         self.set_footer(text="Started")
 
@@ -58,5 +58,7 @@ class GiveawayEndEmbed(Embed):
         entries_str = f"Entries: {entries}"
         winner_str = f"Winner: {winner}"
         self.add_field(
-            name="Detail", value="\n".join([hosted_by, ended, entries_str, winner_str]), inline=False
+            name="Detail",
+            value="\n".join([hosted_by, ended, entries_str, winner_str]),
+            inline=False,
         )

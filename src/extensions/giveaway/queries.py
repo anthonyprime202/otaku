@@ -13,6 +13,7 @@ ORDER BY end_time ASC
 
 select_completed_giveaway = """
 SELECT giveaway_id, end_time
+FROM giveaways
 WHERE completed = TRUE
 """
 

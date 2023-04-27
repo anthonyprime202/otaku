@@ -10,6 +10,7 @@ from .utils import Config, DictToObject, get_prefix
 from .embed import Embed
 
 from logging.config import dictConfig
+from datetime import datetime
 from typing import Optional
 import logging
 import os
@@ -73,6 +74,10 @@ class OtakuBot(commands.Bot):
 
 
     ## Setting up custom properties
+    def current_time(self) -> datetime:
+        """Returns the current utc timestamp"""
+        return discord.utils.utcnow()
+
     @property
     def config(self) -> Config:
         with open("config.yaml", mode="r") as file:

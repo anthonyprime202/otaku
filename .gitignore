@@ -1,0 +1,16 @@
+# Cache files
+__pycache__/
+
+# VS code setting
+.vscode/
+
+# Environment
+.env 
+.venv/
+
+# test
+tests.*
+*.session.sql
+
+# logs
+*.log

@@ -1,0 +1,48 @@
+extensions: []
+
+presence:
+  status: idle
+  activity: watching
+  name: "⚔️ Demon Slayer S3"
+
+color:
+  blurple: 0x5865F2
+  embed: 0x2B2D31
+  green: 0x57F287
+  red: 0xED4245
+  gold: 0xF1C40F
+  fuchsia: 0xEB459E
+
+logging:
+  version: 1
+  disable_existing_loggers: True
+
+  formatters:
+    default:
+      format: "%(asctime)s : %(levelname)s : %(filename)s : %(name)s : %(message)s"
+      datefmt: "%Y-%m-%d %H:%M:%S"
+
+  handlers:
+    console:
+      level: DEBUG
+      class: logging.StreamHandler
+      formatter: default
+
+    file:
+      level: DEBUG
+      class: logging.FileHandler
+      formatter: default
+      filename: discord.log
+      mode: w
+
+  loggers:
+    bot:
+      level: DEBUG
+      handlers:
+        - file
+        - console
+
+    discord:
+      level: DEBUG
+      handlers:
+        - file

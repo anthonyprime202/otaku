@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS giveaways (
     prize VARCHAR(128) NOT NULL,
     description VARCHAR(255) DEFAULT '',
     entries BIGINT[] DEFAULT ARRAY[]::BIGINT[],
-    start_time TIMESTAMP NOT NULL,
-    end_time TIMESTAMP NOT NULL,
+    start_time TIMESTAMPTZ NOT NULL,
+    end_time TIMESTAMPTZ NOT NULL,
     completed BOOLEAN DEFAULT FALSE 
 );

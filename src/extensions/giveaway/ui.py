@@ -91,8 +91,8 @@ class GiveawayModal(ui.Modal):
                 extras="Tip: use `setup channel giveaway` to setup a giveaway channel"
                 if giveaway_channel_id is None
                 else None,
-            ), 
-            ephemeral=True 
+            ),
+            ephemeral=True,
         )
 
         # Restarting timer
@@ -101,6 +101,6 @@ class GiveawayModal(ui.Modal):
             giveaway_timer.restart()
         else:
             giveaway_timer.start()
-    
+
     async def on_error(self, inter: Interaction[OtakuBot], error: Exception):
         inter.client.log.error(error)

@@ -15,6 +15,8 @@ from datetime import timedelta
 class GiveawayTimer(Cog, name="Giveaway Timer Cog"):
     async def cog_load(self):
         await super().cog_load()
+        self.giveaway_timer.start()
+        self.reroll_timer.start()
 
     async def cog_umload(self):
         await super().cog_unload()

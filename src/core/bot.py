@@ -6,7 +6,7 @@ import discord
 import asyncpg
 import yaml
 
-from .helpers import Config, DictToObject, get_prefix
+from .utils import Config, DictToObject, get_prefix
 from .embed import Embed
 
 from logging.config import dictConfig

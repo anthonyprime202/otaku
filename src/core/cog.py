@@ -13,6 +13,7 @@ class Cog(commands.Cog):
         self.config = bot.config
         self.db = bot.db
         self.log = bot.log
+        self.current_time = bot.current_time
 
     async def cog_load(self):
         self.log.info(f"{self.qualified_name} has been loaded")
